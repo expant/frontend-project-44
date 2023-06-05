@@ -1,0 +1,26 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "brain-games project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/expant/frontend-project-44.git"
+  },
+  "keywords": [
+    "brain-games"
+  ],
+  "author": "Anton Elagin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/expant/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/expant/frontend-project-44#readme",
+  "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  }
+}
