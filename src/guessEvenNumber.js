@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import welcome from './cli.js';
 
-const getAnswers = (randomNumber, correctAnswer) => {
+const getUserAnswer = (randomNumber, correctAnswer) => {
   console.log(`Question: ${randomNumber}`);
   return [
     readlineSync.question('Your answer: '),
@@ -11,10 +11,10 @@ const getAnswers = (randomNumber, correctAnswer) => {
 
 const defineNumber = (maxNumber) => {
   const randomNumber = Math.floor(Math.random() * maxNumber);
-  return getAnswers(
+  return [
     randomNumber,
     randomNumber % 2 === 0 ? 'yes' : 'no',
-  );
+  ];
 };
 
 export default () => {
@@ -24,13 +24,15 @@ export default () => {
   const maxNumber = 100;
 
   for (let index = 0; index < 3; index += 1) {
-    const [userAnswer, correctAnswer] = defineNumber(maxNumber);
+    const [randomNumber, correctAnswer] = defineNumber(maxNumber);
+    const userAnswer = getUserAnswer(randomNumber, correctAnswer);
 
     if (correctAnswer !== userAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       console.log(`Let's try again, ${name}`);
       return;
     }
+
     console.log('Correct!');
   }
   console.log(`Congratulations, ${name}!`);
