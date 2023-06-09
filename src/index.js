@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import welcome from './games/cli.js';
 
-const MAX_NUMBER = 10;
+const MAX_NUMBER = 100;
 const MAX_ROUNDS_COUNT = 3;
 
 const printRule = (rule) => console.log(rule);
