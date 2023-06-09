@@ -1,39 +1,15 @@
-import readlineSync from 'readline-sync';
-import welcome from './cli.js';
+import app from '../index.js';
 
-const getUserAnswer = (randomNumber, correctAnswer) => {
-  console.log(`Question: ${randomNumber}`);
-  return [
-    readlineSync.question('Your answer: '),
-    correctAnswer,
-  ];
+const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const getRandomNum = (maxNum) => Math.floor(Math.random() * maxNum);
+const isEven = (num) => num % 2 === 0;
+
+const defineNumbers = (maxNum) => {
+  const randomNum = getRandomNum(maxNum);
+  const correctAnswer = isEven(randomNum) ? 'yes' : 'no';
+
+  return [randomNum, correctAnswer];
 };
 
-const defineNumber = (maxNumber) => {
-  const randomNumber = Math.floor(Math.random() * maxNumber);
-  return [
-    randomNumber,
-    randomNumber % 2 === 0 ? 'yes' : 'no',
-  ];
-};
-
-export default () => {
-  const name = welcome();
-
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const maxNumber = 100;
-
-  for (let index = 0; index < 3; index += 1) {
-    const [randomNumber, correctAnswer] = defineNumber(maxNumber);
-    const userAnswer = getUserAnswer(randomNumber, correctAnswer);
-
-    if (correctAnswer !== userAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-      console.log(`Let's try again, ${name}`);
-      return;
-    }
-
-    console.log('Correct!');
-  }
-  console.log(`Congratulations, ${name}!`);
-};
+export default () => app(rule, defineNumbers);
