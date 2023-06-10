@@ -4,7 +4,7 @@ const rule = 'What is the result of the expression?';
 
 const getRandomValue = (maxNum) => Math.floor(Math.random() * maxNum);
 
-const getOperator = () => { 
+const getOperator = () => {
   const operators = ['+', '-', '*'];
   return operators[getRandomValue(operators.length)];
 };
