@@ -3,7 +3,11 @@ import app from '../index.js';
 const rule = 'What is the result of the expression?';
 
 const getRandomValue = (maxNum) => Math.floor(Math.random() * maxNum);
-const getOperators = () => ['+', '-', '*'];
+
+const getOperator = () => { 
+  const operators = ['+', '-', '*'];
+  return operators[getRandomValue(operators.length)];
+};
 
 const calculate = (expression) => {
   const [operand1, operator, operand2] = expression;
@@ -17,11 +21,9 @@ const calculate = (expression) => {
 };
 
 const getGameData = (maxNum) => {
-  const operators = getOperators();
-
   const operand1 = getRandomValue(maxNum);
   const operand2 = getRandomValue(maxNum);
-  const operator = operators[getRandomValue(operators.length)];
+  const operator = getOperator();
   const expression = [operand1, operator, operand2];
 
   const resultCalc = String(calculate(expression));
