@@ -20,6 +20,15 @@ Brain-games - a set of five console games based on popular mobile brain training
     Setup example:
     `sudo apt install make`
 
+## Installation
+
+1.  Install dependencies: `make install`
+1.  Install game packages: `npm link` or `sudo npm link`
+
+## Usage
+
+`brain-games` `brain-even` `brain-gcd` `brain-progression` `brain-prime`
+
 ### Here you can see the execution of a programs in the terminal
 
 * [brain-even](https://asciinema.org/a/obDcIPkX2vDfcz8ExtjCeToAx)
