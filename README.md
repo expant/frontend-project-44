@@ -22,8 +22,18 @@ Brain-games - a set of five console games based on popular mobile brain training
 
 ## Installation
 
-1.  Install dependencies: `make install`
-1.  Install game packages: `npm link` or `sudo npm link`
+1.  Install dependencies: 
+    ```sh
+    make install
+    ```
+1.  Install game packages: 
+    ```sh
+    npm link
+    ``` 
+    or 
+    ```sh
+    sudo npm link
+    ```
 
 ## Usage
 
