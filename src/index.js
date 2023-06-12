@@ -9,7 +9,7 @@ const printCongratulations = (username) => console.log(`Congratulations, ${usern
 const printCorrect = () => console.log('Correct!');
 const printLoss = (username, userAnswer, correctAnswer) => {
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-  console.log(`Let's try again, ${username}`);
+  console.log(`Let's try again, ${username}!`);
 };
 
 const askQuestion = (question) => console.log(`Question: ${question}`);
