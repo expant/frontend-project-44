@@ -2,7 +2,7 @@ import app from '../index.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getRandomNum = (maxNum) => Math.floor(Math.random() * maxNum);
+const getRandomNum = (maxNum) => Math.floor(Math.random() * maxNum) + 1;
 const isEven = (num) => num % 2 === 0;
 
 const getGameData = (maxNum) => {
