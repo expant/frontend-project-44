@@ -6,9 +6,9 @@ const getRandomNum = (maxNum) => Math.floor(Math.random() * maxNum) + 1;
 
 const isNumWithoutRemainder = (num1, num2) => num1 % num2 === 0;
 
-const isPrime = (initNum) => {
-  for (let num = initNum; num > 2; num -= 1) {
-    if (isNumWithoutRemainder(initNum, num - 1)) {
+const isPrime = (initialNum) => {
+  for (let num = initialNum; num > 2; num -= 1) {
+    if (isNumWithoutRemainder(initialNum, num - 1)) {
       return false;
     }
   }
