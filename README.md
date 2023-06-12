@@ -27,6 +27,7 @@ Brain-games - a set of five console games based on popular mobile brain training
 
 ## Usage
 
+#### Use the following commands to launch games:
 `brain-games` `brain-even` `brain-gcd` `brain-progression` `brain-prime`
 
 ### Here you can see the execution of a programs in the terminal
