@@ -13,6 +13,13 @@ Brain-games - a set of five console games based on popular mobile brain training
 * Finding the Greatest Common Divisor.
 * Definition of a prime number.
 
+## Minimal requirements
+
+* installed latest(fresh) Node.js version
+* installed 'make' utility. 
+    Setup example:
+    `sudo apt install make`
+
 ### Here you can see the execution of a programs in the terminal
 
 * [brain-even](https://asciinema.org/a/obDcIPkX2vDfcz8ExtjCeToAx)
