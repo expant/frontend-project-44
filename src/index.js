@@ -18,11 +18,8 @@ const getUserAnswer = () => readlineSync.question('Your answer: ');
 
 const isCorrectAnswer = (correctAnswer, userAnswer) => correctAnswer === userAnswer;
 
-export default (rule, getGameData) => {
-  const username = welcome();
-  printRule(rule);
-
-  for (let index = 0; index < MAX_ROUNDS_COUNT; index += 1) {
+const isUserWin = (username, getGameData) => {
+  for (let round = 0; round < MAX_ROUNDS_COUNT; round += 1) {
     const [question, correctAnswer] = getGameData(MAX_NUMBER);
     askQuestion(question);
 
@@ -30,9 +27,19 @@ export default (rule, getGameData) => {
 
     if (!isCorrectAnswer(correctAnswer, userAnswer)) {
       printLoss(username, userAnswer, correctAnswer);
-      return;
+      return false;
     }
     printCorrect();
   }
-  printCongratulations(username);
+
+  return true;
+};
+
+export default (rule, getGameData) => {
+  const username = welcome();
+  printRule(rule);
+
+  if (isUserWin(username, getGameData)) {
+    printCongratulations(username);
+  }
 };
