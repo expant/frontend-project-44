@@ -9,7 +9,7 @@ const getRandomNum = (maxNum) => Math.floor(Math.random() * maxNum) + 1;
 
 const hideItem = (arr) => {
   const newArr = [...arr];
-  const index = getRandomNum(newArr.length);
+  const index = getRandomNum(newArr.length - 1);
 
   newArr[index] = '..';
 
