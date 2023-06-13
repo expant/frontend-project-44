@@ -7,13 +7,13 @@ const MAX_PROGRESSION_DIFFERENCE = 10;
 
 const getRandomNum = (maxNum) => Math.floor(Math.random() * maxNum) + 1;
 
-const hideItem = (arr) => {
-  const newArr = [...arr];
-  const index = getRandomNum(newArr.length - 1);
+const hideItem = (numbers) => {
+  const copiedNumbers = [...numbers];
+  const index = getRandomNum(copiedNumbers.length - 1);
 
-  newArr[index] = '..';
+  copiedNumbers[index] = '..';
 
-  return [newArr, arr[index]];
+  return [copiedNumbers, numbers[index]];
 };
 
 const getProgression = (maxNum) => {
