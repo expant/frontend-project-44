@@ -18,8 +18,8 @@ const hideItem = (numbers) => {
 
 const getProgression = (maxNum) => {
   const progression = [];
+  const progressionLength = getRandomNum(MIN_PROGRESSION_LENGTH) + MIN_PROGRESSION_LENGTH;
   const difference = getRandomNum(MAX_PROGRESSION_DIFFERENCE);
-  const progressionLength = difference + MIN_PROGRESSION_LENGTH;
 
   progression[0] = getRandomNum(maxNum);
 
