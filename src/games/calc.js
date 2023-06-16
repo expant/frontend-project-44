@@ -25,10 +25,10 @@ const getGameData = (maxNum) => {
   const operator = getOperator();
   const expression = [operand1, operator, operand2];
 
-  const resultCalc = String(calculate(expression));
-  const expressionStr = expression.join(' ');
+  const question = expression.join(' ');
+  const correctAnswer = String(calculate(expression));
 
-  return [expressionStr, resultCalc];
+  return [question, correctAnswer];
 };
 
 export default () => app(rule, getGameData);

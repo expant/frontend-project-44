@@ -20,10 +20,10 @@ const getGcd = (nums) => {
 const getGameData = (maxNum) => {
   const num1 = getRandomNum(maxNum);
   const num2 = getRandomNum(maxNum);
-  const expression = `${num1} ${num2}`;
-  const gcd = String(getGcd([num1, num2]));
+  const question = `${num1} ${num2}`;
+  const correctAnswer = String(getGcd([num1, num2]));
 
-  return [expression, gcd];
+  return [question, correctAnswer];
 };
 
 export default () => app(rule, getGameData);

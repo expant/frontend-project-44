@@ -32,11 +32,11 @@ const getProgression = (maxNum) => {
 
 const getGameData = (maxNum) => {
   const progression = getProgression(maxNum);
-  const [progressionWithHiddenItem, hiddenItem] = hideItem(progression);
+  const [question, correctAnswer] = hideItem(progression);
 
   return [
-    progressionWithHiddenItem.join(' '),
-    String(hiddenItem),
+    question.join(' '),
+    String(correctAnswer),
   ];
 };
 

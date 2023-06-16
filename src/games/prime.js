@@ -16,10 +16,10 @@ const isPrime = (initialNum) => {
 };
 
 const getGameData = (maxNum) => {
-  const num = getRandomNum(maxNum);
-  const correctAnswer = isPrime(num) ? 'yes' : 'no';
+  const question = getRandomNum(maxNum);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
-  return [num, correctAnswer];
+  return [question, correctAnswer];
 };
 
 export default () => app(rule, getGameData);
