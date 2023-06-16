@@ -42,8 +42,18 @@ Brain-games - a set of five console games based on popular mobile brain training
 
 ### Here you can see the execution of a programs in the terminal
 
-* [brain-even](https://asciinema.org/a/obDcIPkX2vDfcz8ExtjCeToAx)
-* [brain-calc](https://asciinema.org/a/zNSoDgp4U44NwFDGQrlPQXW9T)
-* [brain-gcd](https://asciinema.org/a/hkxVfBdZbdkU2Efgeb4ASk6HT)
-* [brain-progression](https://asciinema.org/a/sg9nehUbICMFScTKSDm2cx1jK)
-* [brain-prime](https://asciinema.org/a/5q3FTLOkOA5NLpEcVXjvLZL2W)
+
+#### brain-even
+[![brain-even](https://asciinema.org/a/gICEWsdfxkpr4yx5S71gT21Mk.svg)](https://asciinema.org/a/gICEWsdfxkpr4yx5S71gT21Mk)
+
+#### brain-calc
+[![brain-calc](https://asciinema.org/a/zNSoDgp4U44NwFDGQrlPQXW9T.svg)](https://asciinema.org/a/zNSoDgp4U44NwFDGQrlPQXW9T)
+
+#### brain-gcd
+[![brain-gcd](https://asciinema.org/a/hkxVfBdZbdkU2Efgeb4ASk6HT.svg)](https://asciinema.org/a/hkxVfBdZbdkU2Efgeb4ASk6HT)
+
+#### brain-progression
+[![brain-progression](https://asciinema.org/a/sg9nehUbICMFScTKSDm2cx1jK.svg)](https://asciinema.org/a/sg9nehUbICMFScTKSDm2cx1jK)
+
+#### brain-prime
+[![brain-prime](https://asciinema.org/a/5q3FTLOkOA5NLpEcVXjvLZL2W.svg)](https://asciinema.org/a/5q3FTLOkOA5NLpEcVXjvLZL2W)
