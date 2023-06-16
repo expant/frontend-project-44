@@ -47,7 +47,7 @@ Brain-games - a set of five console games based on popular mobile brain training
 [![brain-even](https://asciinema.org/a/gICEWsdfxkpr4yx5S71gT21Mk.svg)](https://asciinema.org/a/gICEWsdfxkpr4yx5S71gT21Mk)
 
 #### brain-calc
-[![brain-calc](https://asciinema.org/a/zNSoDgp4U44NwFDGQrlPQXW9T.svg)](https://asciinema.org/a/zNSoDgp4U44NwFDGQrlPQXW9T)
+[![brain-calc](https://asciinema.org/a/UJ4C9U51zqGFC45HSfs3dwvOO.svg)](https://asciinema.org/a/UJ4C9U51zqGFC45HSfs3dwvOO)
 
 #### brain-gcd
 [![brain-gcd](https://asciinema.org/a/hkxVfBdZbdkU2Efgeb4ASk6HT.svg)](https://asciinema.org/a/hkxVfBdZbdkU2Efgeb4ASk6HT)
