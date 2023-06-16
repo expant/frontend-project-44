@@ -1,8 +1,7 @@
 import app from '../index.js';
+import getRandomNum from '../utils.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-const getRandomNum = (maxNum) => Math.floor(Math.random() * maxNum) + 1;
 
 const isNumWithoutRemainder = (num1, num2) => num1 % num2 === 0;
 

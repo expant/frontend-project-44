@@ -1,8 +1,7 @@
 import app from '../index.js';
+import getRandomNum from '../utils.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';
-
-const getRandomNum = (maxNum) => Math.floor(Math.random() * maxNum) + 1;
 
 const getDivider = (num1, num2) => num1 % num2;
 
