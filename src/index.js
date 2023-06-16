@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync';
-import welcome from './games/cli.js';
 
 const MAX_NUMBER = 100;
 const MAX_ROUNDS_COUNT = 3;
 
+const getUsername = () => readlineSync.question('May I have your name? ');
 const getUserAnswer = () => readlineSync.question('Your answer: ');
 
 const isCorrectAnswer = (correctAnswer, userAnswer) => correctAnswer === userAnswer;
@@ -29,7 +29,10 @@ const isUserWin = (username, getGameData) => {
 };
 
 export default (rule, getGameData) => {
-  const username = welcome();
+  console.log('Welcome to the Brain Games!');
+  const username = getUsername();
+  console.log(`Hello, ${username}`);
+
   console.log(rule);
 
   if (isUserWin(username, getGameData)) {
