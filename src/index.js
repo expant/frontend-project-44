@@ -8,7 +8,13 @@ const getUserAnswer = () => readlineSync.question('Your answer: ');
 
 const isCorrectAnswer = (correctAnswer, userAnswer) => correctAnswer === userAnswer;
 
-const isUserWin = (username, getGameData) => {
+export default (rule, getGameData) => {
+  console.log('Welcome to the Brain Games!');
+  const username = getUsername();
+  console.log(`Hello, ${username}`);
+
+  console.log(rule);
+
   for (let round = 0; round < MAX_ROUNDS_COUNT; round += 1) {
     const [question, correctAnswer] = getGameData(MAX_NUMBER);
 
@@ -20,22 +26,10 @@ const isUserWin = (username, getGameData) => {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       console.log(`Let's try again, ${username}!`);
 
-      return false;
+      return;
     }
     console.log('Correct!');
   }
 
-  return true;
-};
-
-export default (rule, getGameData) => {
-  console.log('Welcome to the Brain Games!');
-  const username = getUsername();
-  console.log(`Hello, ${username}`);
-
-  console.log(rule);
-
-  if (isUserWin(username, getGameData)) {
-    console.log(`Congratulations, ${username}!`);
-  }
+  console.log(`Congratulations, ${username}!`);
 };
