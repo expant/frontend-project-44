@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
 
-const MAX_NUMBER = 100;
 const MAX_ROUNDS_COUNT = 3;
 
 const getUsername = () => readlineSync.question('May I have your name? ');
@@ -16,7 +15,7 @@ export default (rule, getGameData) => {
   console.log(rule);
 
   for (let round = 0; round < MAX_ROUNDS_COUNT; round += 1) {
-    const [question, correctAnswer] = getGameData(MAX_NUMBER);
+    const [question, correctAnswer] = getGameData();
 
     console.log(`Question: ${question}`);
 
