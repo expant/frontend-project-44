@@ -1,5 +1,5 @@
 import app from '../index.js';
-import getRandomNum from '../utils.js';
+import { getRandomNum } from '../utils.js';
 
 const RULE = 'Answer "yes" if the number is even, otherwise answer "no".';
 
