@@ -1,14 +1,12 @@
 import app from '../index.js';
 import getRandomNum from '../utils.js';
 
-const rule = 'What is the result of the expression?';
+const RULE = 'What is the result of the expression?';
 
 const NUM_INTERVAL = [1, 10];
+const OPERATORS = ['+', '-', '*'];
 
-const getOperator = () => {
-  const operators = ['+', '-', '*'];
-  return operators[getRandomNum(operators.length) - 1];
-};
+const getOperator = () => OPERATORS[getRandomNum(OPERATORS.length) - 1];
 
 const calculate = (expression) => {
   const [operand1, operator, operand2] = expression;
@@ -33,4 +31,4 @@ const getGameData = () => {
   return [question, correctAnswer];
 };
 
-export default () => app(rule, getGameData);
+export default () => app(RULE, getGameData);

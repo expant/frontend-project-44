@@ -1,7 +1,7 @@
 import app from '../index.js';
 import getRandomNum from '../utils.js';
 
-const rule = 'What number is missing in the progression?';
+const RULE = 'What number is missing in the progression?';
 
 const MIN_PROGRESSION_LENGTH = 5;
 const MAX_PROGRESSION_DIFFERENCE = 10;
@@ -41,4 +41,4 @@ const getGameData = () => {
   ];
 };
 
-export default () => app(rule, getGameData);
+export default () => app(RULE, getGameData);

@@ -2,12 +2,12 @@ import readlineSync from 'readline-sync';
 
 const MAX_ROUNDS_COUNT = 3;
 
-export default (rule, getGameData) => {
+export default (RULE, getGameData) => {
   console.log('Welcome to the Brain Games!');
   const username = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${username}`);
 
-  console.log(rule);
+  console.log(RULE);
 
   for (let round = 0; round < MAX_ROUNDS_COUNT; round += 1) {
     const [question, correctAnswer] = getGameData();

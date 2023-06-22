@@ -1,7 +1,7 @@
 import app from '../index.js';
 import getRandomNum from '../utils.js';
 
-const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const NUM_INTERVAL = [1, 100];
 
@@ -24,4 +24,4 @@ const getGameData = () => {
   return [question, correctAnswer];
 };
 
-export default () => app(rule, getGameData);
+export default () => app(RULE, getGameData);

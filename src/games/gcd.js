@@ -1,7 +1,7 @@
 import app from '../index.js';
 import getRandomNum from '../utils.js';
 
-const rule = 'Find the greatest common divisor of given numbers.';
+const RULE = 'Find the greatest common divisor of given numbers.';
 
 const NUM_INTERVAL = [1, 100];
 
@@ -28,4 +28,4 @@ const getGameData = () => {
   return [question, correctAnswer];
 };
 
-export default () => app(rule, getGameData);
+export default () => app(RULE, getGameData);
