@@ -6,9 +6,7 @@ const RULE = 'What is the result of the expression?';
 const NUM_INTERVAL = [1, 10];
 const OPERATORS = ['+', '-', '*'];
 
-const calculate = (expression) => {
-  const [operand1, operator, operand2] = expression;
-
+const calculate = (operand1, operator, operand2) => {
   switch (operator) {
     case '+': return operand1 + operand2;
     case '-': return operand1 - operand2;
@@ -21,10 +19,9 @@ const getGameData = () => {
   const operand1 = getRandomNum(...NUM_INTERVAL);
   const operand2 = getRandomNum(...NUM_INTERVAL);
   const operator = OPERATORS[getRandomIndex(OPERATORS)];
-  const expression = [operand1, operator, operand2];
 
-  const question = expression.join(' ');
-  const correctAnswer = String(calculate(expression));
+  const question = `${operand1} ${operator} ${operand2}`;
+  const correctAnswer = String(calculate(operand1, operator, operand2));
 
   return [question, correctAnswer];
 };
