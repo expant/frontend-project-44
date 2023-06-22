@@ -1,5 +1,5 @@
 import app from '../index.js';
-import { getRandomNum } from '../utils.js';
+import { getData } from '../utils.js';
 
 const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -17,13 +17,6 @@ const isPrime = (num) => {
   return num > 1;
 };
 
-const getGameData = () => {
-  const number = getRandomNum(...NUM_INTERVAL);
-
-  const question = String(number);
-  const correctAnswer = isPrime(number) ? 'yes' : 'no';
-
-  return [question, correctAnswer];
-};
+const getGameData = () => getData(NUM_INTERVAL, isPrime);
 
 export default () => app(RULE, getGameData);
