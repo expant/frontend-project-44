@@ -2,8 +2,6 @@ import readlineSync from 'readline-sync';
 
 const MAX_ROUNDS_COUNT = 3;
 
-const isCorrectAnswer = (correctAnswer, userAnswer) => correctAnswer === userAnswer;
-
 export default (rule, getGameData) => {
   console.log('Welcome to the Brain Games!');
   const username = readlineSync.question('May I have your name? ');
@@ -18,7 +16,7 @@ export default (rule, getGameData) => {
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (!isCorrectAnswer(correctAnswer, userAnswer)) {
+    if (correctAnswer === userAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       console.log(`Let's try again, ${username}!`);
 
