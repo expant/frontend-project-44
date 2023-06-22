@@ -2,7 +2,7 @@ export const getRandomNum = (min, max) => Math.floor(Math.random() * (max - min)
 
 export const getRandomIndex = (collection) => Math.floor(Math.random() * collection.length);
 
-export const getData = (NUM_INTERVAL, isNumTo) => {
+export const getQuestionAndAnswer = (NUM_INTERVAL, isNumTo) => {
   const number = getRandomNum(...NUM_INTERVAL);
 
   const question = String(number);
