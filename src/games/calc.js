@@ -11,7 +11,8 @@ const calculate = (operand1, operator, operand2) => {
     case '+': return operand1 + operand2;
     case '-': return operand1 - operand2;
     case '*': return operand1 * operand2;
-    default: return null;
+    default:
+      throw new Error(`Unknown operator: ${operator}`);
   }
 };
 
