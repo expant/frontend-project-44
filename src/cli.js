@@ -1,11 +1,9 @@
 import readlineSync from 'readline-sync';
 
-const getName = () => readlineSync.question('May I have your name? ');
-
 const welcome = () => {
   console.log('Welcome to the Brain Games!');
 
-  const name = getName();
+  const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}`);
 };
 
