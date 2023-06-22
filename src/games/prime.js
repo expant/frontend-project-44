@@ -3,18 +3,18 @@ import { getRandomNum } from '../utils.js';
 
 const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const NUM_INTERVAL = [1, 100];
+const NUM_INTERVAL = [0, 10];
 
-const isNumWithoutRemainder = (num1, num2) => num1 % num2 === 0;
+const isPrime = (num) => {
+  const sqrtNum = Math.sqrt(num);
 
-const isPrime = (initialNum) => {
-  for (let num = initialNum; num > 2; num -= 1) {
-    if (isNumWithoutRemainder(initialNum, num - 1)) {
+  for (let divider = 2; divider <= sqrtNum; divider += 1) {
+    if (num % divider === 0) {
       return false;
     }
   }
 
-  return true;
+  return num > 1;
 };
 
 const getGameData = () => {
