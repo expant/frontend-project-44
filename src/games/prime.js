@@ -3,7 +3,7 @@ import getRandomNum from '../utils.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const MAX_NUM = 100;
+const NUM_INTERVAL = [1, 100];
 
 const isNumWithoutRemainder = (num1, num2) => num1 % num2 === 0;
 
@@ -18,7 +18,7 @@ const isPrime = (initialNum) => {
 };
 
 const getGameData = () => {
-  const question = getRandomNum(MAX_NUM);
+  const question = getRandomNum(...NUM_INTERVAL);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
   return [question, correctAnswer];

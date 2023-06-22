@@ -3,7 +3,7 @@ import getRandomNum from '../utils.js';
 
 const rule = 'What is the result of the expression?';
 
-const MAX_NUM = 10;
+const NUM_INTERVAL = [1, 10];
 
 const getOperator = () => {
   const operators = ['+', '-', '*'];
@@ -22,8 +22,8 @@ const calculate = (expression) => {
 };
 
 const getGameData = () => {
-  const operand1 = getRandomNum(MAX_NUM);
-  const operand2 = getRandomNum(MAX_NUM);
+  const operand1 = getRandomNum(...NUM_INTERVAL);
+  const operand2 = getRandomNum(...NUM_INTERVAL);
   const operator = getOperator();
   const expression = [operand1, operator, operand2];
 

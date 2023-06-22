@@ -3,7 +3,7 @@ import getRandomNum from '../utils.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
-const MAX_NUM = 100;
+const NUM_INTERVAL = [1, 100];
 
 const getDivider = (num1, num2) => num1 % num2;
 
@@ -20,8 +20,8 @@ const getGcd = (nums) => {
 };
 
 const getGameData = () => {
-  const num1 = getRandomNum(MAX_NUM);
-  const num2 = getRandomNum(MAX_NUM);
+  const num1 = getRandomNum(...NUM_INTERVAL);
+  const num2 = getRandomNum(...NUM_INTERVAL);
   const question = `${num1} ${num2}`;
   const correctAnswer = String(getGcd([num1, num2]));
 

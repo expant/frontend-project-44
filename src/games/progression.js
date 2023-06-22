@@ -5,11 +5,11 @@ const rule = 'What number is missing in the progression?';
 
 const MIN_PROGRESSION_LENGTH = 5;
 const MAX_PROGRESSION_DIFFERENCE = 10;
-const MAX_NUM = 100;
+const NUM_INTERVAL = [1, 100];
 
 const hideItem = (numbers) => {
   const copiedNumbers = [...numbers];
-  const index = getRandomNum(copiedNumbers.length - 1);
+  //const index = getRandomNum(copiedNumbers.length - 1);
 
   copiedNumbers[index] = '..';
 
@@ -21,7 +21,7 @@ const getProgression = () => {
   const progressionLength = getRandomNum(MIN_PROGRESSION_LENGTH) + MIN_PROGRESSION_LENGTH;
   const difference = getRandomNum(MAX_PROGRESSION_DIFFERENCE);
 
-  progression[0] = getRandomNum(MAX_NUM);
+  progression[0] = getRandomNum(...NUM_INTERVAL);
 
   for (let i = 0; i < progressionLength; i += 1) {
     const progressionItem = progression[i] + difference;
@@ -32,7 +32,7 @@ const getProgression = () => {
 };
 
 const getGameData = () => {
-  const progression = getProgression(MAX_NUM);
+  const progression = getProgression();
   const [question, correctAnswer] = hideItem(progression);
 
   return [
