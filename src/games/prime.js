@@ -6,9 +6,9 @@ const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const NUM_INTERVAL = [0, 10];
 
 const isPrime = (num) => {
-  const sqrtNum = Math.sqrt(num);
+  const checkLimit = Math.sqrt(num);
 
-  for (let divider = 2; divider <= sqrtNum; divider += 1) {
+  for (let divider = 2; divider <= checkLimit; divider += 1) {
     if (num % divider === 0) {
       return false;
     }
