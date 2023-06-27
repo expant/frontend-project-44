@@ -2,9 +2,7 @@ import app from '../index.js';
 import { getRandomNum, getRandomIndex } from '../utils.js';
 
 const RULE = 'What number is missing in the progression?';
-
-const MAX_PROGRESSION_DIFFERENCE = 10;
-
+const DIFFERENCE_INTERVAL = [1, 10];
 const LENGTH_INTERVAL = [5, 10];
 const NUM_INTERVAL = [1, 100];
 
@@ -20,7 +18,7 @@ const hideItem = (numbers) => {
 const getProgression = () => {
   const progression = [];
   const progressionLength = getRandomNum(...LENGTH_INTERVAL);
-  const difference = getRandomNum(1, MAX_PROGRESSION_DIFFERENCE);
+  const difference = getRandomNum(...DIFFERENCE_INTERVAL);
 
   progression[0] = getRandomNum(...NUM_INTERVAL);
 
