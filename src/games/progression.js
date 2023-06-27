@@ -17,14 +17,14 @@ const hideItem = (numbers) => {
 
 const getProgression = () => {
   const progression = [];
-  const progressionLength = getRandomNum(...LENGTH_INTERVAL);
+  const length = getRandomNum(...LENGTH_INTERVAL);
   const difference = getRandomNum(...DIFFERENCE_INTERVAL);
 
   progression[0] = getRandomNum(...NUM_INTERVAL);
 
-  for (let i = 0; i < progressionLength; i += 1) {
-    const progressionItem = progression[i] + difference;
-    progression.push(progressionItem);
+  for (let i = 0; i < length; i += 1) {
+    const item = progression[i] + difference;
+    progression.push(item);
   }
 
   return progression;
