@@ -8,7 +8,7 @@ const NUM_INTERVAL = [1, 100];
 
 const getProgression = (length, difference, firstNum) => {
   const progression = [];
-  
+
   for (let i = 0; i < length; i += 1) {
     if (!progression.length) {
       progression.push(firstNum);
