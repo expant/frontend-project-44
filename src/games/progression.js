@@ -6,15 +6,6 @@ const DIFFERENCE_INTERVAL = [1, 10];
 const LENGTH_INTERVAL = [5, 10];
 const NUM_INTERVAL = [1, 100];
 
-const hideItem = (numbers) => {
-  const copiedNumbers = [...numbers];
-  const index = getRandomIndex(copiedNumbers);
-
-  copiedNumbers[index] = '..';
-
-  return [copiedNumbers, numbers[index]];
-};
-
 const getProgression = () => {
   const progression = [];
   const length = getRandomNum(...LENGTH_INTERVAL);
@@ -32,12 +23,12 @@ const getProgression = () => {
 
 const getGameData = () => {
   const progression = getProgression();
-  const [question, correctAnswer] = hideItem(progression);
+  const index = getRandomIndex(progression);
+  const correctAnswer = String(progression[index]);
+  progression[index] = '..';
+  const question = progression.join(' ');
 
-  return [
-    question.join(' '),
-    String(correctAnswer),
-  ];
+  return [question, correctAnswer];
 };
 
 export default () => app(RULE, getGameData);
