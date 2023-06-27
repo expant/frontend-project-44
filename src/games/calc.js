@@ -2,7 +2,6 @@ import app from '../index.js';
 import { getRandomNum, getRandomIndex } from '../utils.js';
 
 const RULE = 'What is the result of the expression?';
-
 const NUM_INTERVAL = [1, 10];
 const OPERATORS = ['+', '-', '*'];
 

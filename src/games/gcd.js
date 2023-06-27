@@ -2,7 +2,6 @@ import app from '../index.js';
 import { getRandomNum } from '../utils.js';
 
 const RULE = 'Find the greatest common divisor of given numbers.';
-
 const NUM_INTERVAL = [1, 100];
 
 const getGcd = (x, y) => {
