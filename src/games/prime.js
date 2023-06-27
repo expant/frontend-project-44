@@ -1,22 +1,30 @@
 import app from '../index.js';
-import { getQuestionAndAnswer } from '../utils.js';
+import { getRandomNum } from '../utils.js';
 
 const RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const NUM_INTERVAL = [0, 10];
 
 const isPrime = (num) => {
-  const checkLimit = Math.sqrt(num);
+  if (num < 2) return false;
 
+  const checkLimit = Math.sqrt(num);
   for (let divider = 2; divider <= checkLimit; divider += 1) {
     if (num % divider === 0) {
       return false;
     }
   }
 
-  return num > 1;
+  return true;
 };
 
-const getGameData = () => getQuestionAndAnswer(NUM_INTERVAL, isPrime);
+const getGameData = () => {
+  const number = getRandomNum(...NUM_INTERVAL);
+
+  const question = String(number);
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
+
+  return [question, correctAnswer];
+};
 
 export default () => app(RULE, getGameData);
